@@ -41,19 +41,19 @@ if [ ! -f $LOCKFILE ]; then
 EOF
     # CA creation complete and you may now import and sign cert requests.
     # Your new CA certificate file for publishing is at:
-    # /opt/openvpn_data/pki/ca.crt
+    # /opt/Dockovpn_data/pki/ca.crt
 
     easyrsa gen-req MyReq nopass << EOF2
 
 EOF2
     # Keypair and certificate request completed. Your files are:
-    # req: /opt/openvpn_data/pki/reqs/MyReq.req
-    # key: /opt/openvpn_data/pki/private/MyReq.key
+    # req: /opt/Dockovpn_data/pki/reqs/MyReq.req
+    # key: /opt/Dockovpn_data/pki/private/MyReq.key
 
     easyrsa sign-req server MyReq << EOF3
 yes
 EOF3
-    # Certificate created at: /opt/openvpn_data/pki/issued/MyReq.crt
+    # Certificate created at: /opt/Dockovpn_data/pki/issued/MyReq.crt
 
     openvpn --genkey --secret ta.key << EOF4
 yes

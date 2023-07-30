@@ -1,5 +1,3 @@
-# openvpn-docker
-
 Get your stateless VPN server up and running effortlessly with this Docker image. It launches within seconds and doesn't need persistent storage. Simply copy and paste the snippet provided below into your terminal:
 
 ```bash
@@ -13,6 +11,22 @@ docker run -it -d --cap-add=NET_ADMIN \
 -e NET_ADAPTER="eth0" \
 --restart always \
 vo1dbin/openvpn:latest 
+```
+
+### How to build image
+
+`git clone ..` , then:
+
+For amd64 based platforms
+
+```bash
+docker build -f Dockerfile . -t vo1dbin/openvpn-docker-amd64:latest --platform linux/amd64
+```
+
+For arm64 based platforms
+
+```bash
+docker build -f Dockerfile-arm64 . -t vo1dbin/openvpn-docker-arm64:latest --platform linux/arm64
 ```
 
 ### Repos
