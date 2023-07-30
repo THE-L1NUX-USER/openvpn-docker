@@ -1,4 +1,4 @@
-FROM alpine:3.14.1
+FROM alpine:latest
 
 LABEL maintainer="vo1d.bin"
 
