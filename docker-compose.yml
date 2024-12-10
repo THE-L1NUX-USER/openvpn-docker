@@ -7,6 +7,8 @@ services:
     restart: always
     cap_add:
       - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
     ports:
       - "1194:1194/udp"
       - "80:8080/tcp"
